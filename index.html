@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>Varinia Felix</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,7 +11,8 @@
         .menu {
             display: flex;
             justify-content: space-around;
-            background-color: #f2f2f2; /* Change color as desired */
+            background-color: #BCB88A; /* Change color as desired */
+            
             padding: 10px;
         }
         .menu a {
@@ -38,18 +39,34 @@
 <body>
 
     <div class="menu">
-        <a href="javascript:void(0);" onclick="showTab('welcome')">Welcome</a>
-        <a href="javascript:void(0);" onclick="showTab('introduction')">Introduction</a>
+        <a href="javascript:void(0);" onclick="showTab('Welcome')">Welcome</a>
+        <a href="javascript:void(0);" onclick="showTab('Current projects')">Introduction</a>
+        <a href="javascript:void(0);" onclick="showTab('Publications')">Introduction</a>
+        <a href="javascript:void(0);" onclick="showTab('Contact')">Introduction</a>
         <!-- Repeat for other tabs -->
     </div>
 
-    <div class="content" id="welcome">
+    <div class="content" id="Welcome">
         <h1>Welcome</h1>
         <img src="path_to_your_image.jpg" alt="Welcome Image">
         <p>Welcome message and introduction to the site.</p>
     </div>
 
+     <div class="content" id="Contact">
+        <h1>Welcome</h1>
+        <img src="path_to_your_image.jpg" alt="Welcome Image">
+        <p>For recent work and updates on current projects check out my Google Scholar and Linkedin. If you would like to get in touch, email is the best option. You can reach me at variniafelix@arizona.edu.</p>
+    </div>
+
     <!-- Repeat for other content sections -->
+    
+
+
+
+
+
+
+    
 
     <script>
         function showTab(tabId) {
