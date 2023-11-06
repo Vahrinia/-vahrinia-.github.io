@@ -11,8 +11,7 @@
         .menu {
             display: flex;
             justify-content: space-around;
-            background-color: orange; /* Change color as desired */
-            
+            background-color: #BCB88A; /* Change color as desired */
             padding: 10px;
         }
         .menu a {
@@ -21,7 +20,7 @@
             padding: 10px;
         }
         .menu a:hover {
-            background-color: blue; /* Change color as desired */
+            background-color: #ddd; /* Change color as desired */
             border-radius: 5px;
         }
         .content {
@@ -34,32 +33,38 @@
         .active {
             display: block; /* Show active content */
         }
-         <style>
-        
+    </style>
+</head>
+<body>
+
     <div class="menu">
         <a href="javascript:void(0);" onclick="showTab('Welcome')">Welcome</a>
-        <a href="javascript:void(0);" onclick="showTab('Current projects')">Current Projects</a>
+        <a href="javascript:void(0);" onclick="showTab('Current-projects')">Current Projects</a>
         <a href="javascript:void(0);" onclick="showTab('Publications')">Publications</a>
         <a href="javascript:void(0);" onclick="showTab('Contact')">Contact</a>
         <!-- Repeat for other tabs -->
     </div>
 
-        
     <div class="content" id="Welcome">
         <h1>Welcome</h1>
         <img src="path_to_your_image.jpg" alt="Welcome Image">
-        <p>Welcome to my website, I am currently an Environmental Engineering Student at the University of Arizona</p>
+        <p>Welcome message and introduction to the site.</p>
     </div>
 
-     <div class="content" id="Contact">
+    <div class="content" id="Current-projects">
+        <h1>Current Projects</h1>
+        <p>Information about current projects.</p>
+    </div>
+
+    <div class="content" id="Publications">
+        <h1>Publications</h1>
+        <p>List of publications.</p>
+    </div>
+
+    <div class="content" id="Contact">
         <h1>Contact</h1>
-        <img src="path_to_your_image.jpg" alt="Welcome Image">
-        <p>For recent work and updates on current projects check out my Google Scholar and Linkedin. If you would like to get in touch, email is the best option. You can reach me at variniafelix@arizona.edu.</p>
+        <p>For recent work and updates on current projects check out my Google Scholar and LinkedIn. If you would like to get in touch, email is the best option. You can reach me at variniafelix@arizona.edu.</p>
     </div>
-
-    <!-- Repeat for other content sections -->
-    
-
 
     <script>
         function showTab(tabId) {
@@ -67,19 +72,21 @@
             var contents = document.getElementsByClassName('content');
             for (var i = 0; i < contents.length; i++) {
                 contents[i].style.display = 'none';
+                contents[i].classList.remove('active'); // Remove active class
             }
 
             // Show the selected tab's content
             var activeTab = document.getElementById(tabId);
-            activeTab.style.display = 'block';
+            if (activeTab) {
+                activeTab.classList.add('active'); // Add active class to make it visible
+            }
         }
 
-        // Initialize the page with the 'welcome' tab open
+        // Initialize the page with the 'Welcome' tab open
         window.onload = function() {
-            showTab('welcome');
+            showTab('Welcome');
         };
     </script>
 
 </body>
 </html>
-
