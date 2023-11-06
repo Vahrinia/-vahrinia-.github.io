@@ -34,14 +34,30 @@
         .active {
             display: block; /* Show active content */
         }
-    </style>
-</head>
-<body>
+         <style>
 
-// Initialize the page with the 'Welcome' tab open
+        
+<script>
+    function showTab(tabId) {
+        // Hide all content
+        var contents = document.getElementsByClassName('content');
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+            contents[i].classList.remove('active'); // Remove active class
+        }
+
+        // Show the selected tab's content
+        var activeTab = document.getElementById(tabId);
+        if (activeTab) {
+            activeTab.classList.add('active'); // Add active class to make it visible
+        }
+    }
+
+    // Initialize the page with the 'Welcome' tab open
     window.onload = function() {
-        showTab('Welcome'); //
-    
+        showTab('Welcome'); // Make sure this matches the ID of the Welcome div exactly
+    };
+</script>
     <div class="menu">
         <a href="javascript:void(0);" onclick="showTab('Welcome')">Welcome</a>
         <a href="javascript:void(0);" onclick="showTab('Current projects')">Current Projects</a>
