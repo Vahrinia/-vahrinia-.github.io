@@ -11,72 +11,65 @@
         .menu {
             display: flex;
             justify-content: space-around;
-            background-color: #f2f2f2;
+            background-color: #f2f2f2; /* Change color as desired */
             padding: 10px;
         }
         .menu a {
             text-decoration: none;
-            color: black;
+            color: black; /* Change color as desired */
             padding: 10px;
         }
         .menu a:hover {
-            background-color: #ddd;
+            background-color: #ddd; /* Change color as desired */
             border-radius: 5px;
         }
         .content {
+            display: none; /* Hide content by default */
             margin: 15px;
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
+        }
+        .active {
+            display: block; /* Show active content */
         }
     </style>
 </head>
 <body>
 
     <div class="menu">
-        <a href="#welcome">Welcome</a>
-        <a href="#introduction">Introduction</a>
-        <a href="#cv">CV</a>
-        <a href="#mission-vision-goal">Mission, Vision, and Goal</a>
-        <a href="#work-procedures">Work Procedures</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact Information</a>
+        <a href="javascript:void(0);" onclick="showTab('welcome')">Welcome</a>
+        <a href="javascript:void(0);" onclick="showTab('introduction')">Introduction</a>
+        <!-- Repeat for other tabs -->
     </div>
 
     <div class="content" id="welcome">
         <h1>Welcome</h1>
+        <img src="path_to_your_image.jpg" alt="Welcome Image">
         <p>Welcome message and introduction to the site.</p>
     </div>
 
-    <div class="content" id="introduction">
-        <h1>Introduction</h1>
-        <p>Some introduction text about yourself or the website.</p>
-    </div>
+    <!-- Repeat for other content sections -->
 
-    <div class="content" id="cv">
-        <h1>CV</h1>
-        <p>Details about your Curriculum Vitae.</p>
-    </div>
+    <script>
+        function showTab(tabId) {
+            // Hide all content
+            var contents = document.getElementsByClassName('content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none';
+            }
 
-    <div class="content" id="mission-vision-goal">
-        <h1>Mission, Vision, and Goal</h1>
-        <p>Statement of your mission, vision, and goal.</p>
-    </div>
+            // Show the selected tab's content
+            var activeTab = document.getElementById(tabId);
+            activeTab.style.display = 'block';
+        }
 
-    <div class="content" id="work-procedures">
-        <h1>Work Procedures</h1>
-        <p>Information about your work procedures.</p>
-    </div>
-
-    <div class="content" id="publications">
-        <h1>Publications</h1>
-        <p>List of your publications.</p>
-    </div>
-
-    <div class="content" id="contact">
-        <h1>Contact Information</h1>
-        <p>Your contact information.</p>
-    </div>
+        // Initialize the page with the 'welcome' tab open
+        window.onload = function() {
+            showTab('welcome');
+        };
+    </script>
 
 </body>
 </html>
+
