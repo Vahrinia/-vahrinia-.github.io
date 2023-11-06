@@ -74,4 +74,24 @@
 
     <div class="content" id="Contact">
         <h1>Contact</h1>
-        <p>For recent work and updates on current projects check out my Google Scholar and LinkedIn. If you would
+        <p>For recent work and updates on current projects check out my Google Scholar and LinkedIn. If you would like to get in touch, email is the best option. You can reach me at variniafelix@arizona.edu.</p>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all content
+            var contents = document.getElementsByClassName('content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active'); // Remove active class
+            }
+
+            // Show the selected tab's content
+            var activeTab = document.getElementById(tabId);
+            if (activeTab) {
+                activeTab.classList.add('active'); // Add active class to make it visible
+            }
+        }
+    </script>
+
+</body>
+</html>
