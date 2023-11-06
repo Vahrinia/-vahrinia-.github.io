@@ -6,42 +6,57 @@
     <title>Varinia Felix</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
+            background-color: #EDE6ED; /* Off-white background */
+            color: #333; /* Dark text for readability */
         }
         .menu {
-            position: fixed; /* Fixed position */
-            top: 0; /* Start from top */
-            right: 0; /* Align to right */
-            width: 200px; /* Set a width for the menu */
-            height: 100%; /* Full height */
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100%;
             display: flex;
-            flex-direction: column; /* Stack items vertically */
-            align-items: flex-start; /* Align items to the start of the flex container */
-            background-color: #647EA1; /* Menu background color */
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #647EA1; /* Muted blue background for menu */
             padding: 10px;
-            overflow: auto; /* Allows scrolling if the menu is too long */
+            overflow: auto;
         }
         .menu a {
             text-decoration: none;
-            color: black; /* Menu text color */
+            color: #FFD855; /* Yellow text for menu links */
             padding: 10px;
-            display: block; /* Makes the links fill the container width */
+            display: block;
         }
         .menu a:hover {
-            background-color: #CAE8FF; /* Menu item hover color */
+            background-color: #CAE8FF; /* Light blue background for hover state */
             border-radius: 5px;
         }
         .content {
-            display: none; /* Initially hide all content */
-            margin-left: 220px; /* Add left margin to avoid overlapping with the menu */
+            display: none;
+            margin-left: 220px;
             padding: 15px;
-            border: 1px solid #BF7B4E;
+            border: 2px solid #BF7B4E; /* Rust border for content */
             border-radius: 5px;
+            background-color: #FFFFFF; /* White background for content */
+        }
+        h1 {
+            color: #CB4047; /* Crimson color for headings */
         }
         .active {
-            display: block; /* Show active content */
+            display: block;
+        }
+        footer {
+            background-color: #7CA9C6; /* Soft blue for footer */
+            color: #FFF;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -75,18 +90,22 @@
         <p>Contact information...</p>
     </div>
 
+    <footer>
+        <p>&copy; 2023 Varinia Felix</p>
+    </footer>
+
     <script>
         function showTab(tabId) {
             // Hide all content
             var contents = document.getElementsByClassName('content');
             for (var i = 0; i < contents.length; i++) {
-                contents[i].style.display = 'none'; // Use style.display to ensure it's hidden
+                contents[i].style.display = 'none';
             }
 
             // Show the selected tab's content
             var activeTab = document.getElementById(tabId);
             if (activeTab) {
-                activeTab.style.display = 'block'; // Use style.display to show the tab
+                activeTab.style.display = 'block';
             }
         }
 
