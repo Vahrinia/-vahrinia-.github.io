@@ -35,8 +35,16 @@
             display: block; /* Show active content */
         }
          <style>
-
         
+    <div class="menu">
+        <a href="javascript:void(0);" onclick="showTab('Welcome')">Welcome</a>
+        <a href="javascript:void(0);" onclick="showTab('Current projects')">Current Projects</a>
+        <a href="javascript:void(0);" onclick="showTab('Publications')">Publications</a>
+        <a href="javascript:void(0);" onclick="showTab('Contact')">Contact</a>
+        <!-- Repeat for other tabs -->
+    </div>
+
+
 <script>
     function showTab(tabId) {
         // Hide all content
@@ -58,14 +66,10 @@
         showTab('Welcome'); // Make sure this matches the ID of the Welcome div exactly
     };
 </script>
-    <div class="menu">
-        <a href="javascript:void(0);" onclick="showTab('Welcome')">Welcome</a>
-        <a href="javascript:void(0);" onclick="showTab('Current projects')">Current Projects</a>
-        <a href="javascript:void(0);" onclick="showTab('Publications')">Publications</a>
-        <a href="javascript:void(0);" onclick="showTab('Contact')">Contact</a>
-        <!-- Repeat for other tabs -->
-    </div>
 
+
+
+        
     <div class="content" id="Welcome">
         <h1>Welcome</h1>
         <img src="path_to_your_image.jpg" alt="Welcome Image">
