@@ -85,6 +85,36 @@
             pointer-events: none;
             
         }
+        /* Additional styles for CV */
+
+        .resume-section {
+            background-color: #FFF; /* White background for sections */
+            padding: 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+        }
+        .resume-section h2 {
+            color: #647EA1;
+            margin-bottom: 0.5em;
+        }
+        .resume-section p, .resume-section li {
+            color: #333; /* Dark text for readability */
+            line-height: 1.6; /* Spacing for lines */
+        }
+        .resume-section ul {
+            list-style-type: none; /* No bullets for lists */
+            margin: 0;
+            padding: 0;
+        }
+        .resume-section ul li::before {
+            content: '•'; /* Custom bullet points */
+            color: #647EA1; /* Matching theme color for bullets */
+            font-weight: bold; /* Bold bullets */
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
     </style>
 </head>
 <body>
